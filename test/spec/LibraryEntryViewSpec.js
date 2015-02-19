@@ -16,16 +16,16 @@ describe('LibraryEntryView', function() {
   it ('plays clicked songs', function(){
     sinon.spy(SongModel.prototype, 'play');
 
-    view.$el.children().first().click();
+    view.$el.find('.playSong').first().click();
     expect(model.play).to.have.been.called;
 
     SongModel.prototype.play.restore();
   });
 
-  xit('queues clicked songs', function(){
+  it('queues clicked songs', function(){
     sinon.spy(SongModel.prototype, 'enqueue');
 
-    view.$el.children().first().click();
+    view.$el.find('.enqueue').first().click();
     expect(model.enqueue).to.have.been.called;
 
     SongModel.prototype.enqueue.restore();
