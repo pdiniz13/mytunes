@@ -1,0 +1,83 @@
+body {
+  padding: 0 25px;
+  font-family: arial, sans-serif;
+}
+
+.main {
+  width: 910px;
+  height: 800px;
+  padding: 25px;
+  margin: auto;
+  border: solid #ddd 1px;
+  text-align: center;
+}
+
+.main h3 {
+  text-align: center;
+}
+
+.library {
+  width: 500px;
+  margin: 25px 25px 0 0;
+  border: solid #ddd 1px;
+  float: right;
+}
+
+.songQueue {
+  width: 300px;
+  font-size: 12px;
+  float: left;
+  margin: 25px 0 0 25px;
+  border: solid #ddd 1px;
+}
+
+.audio {
+  width: 400px;
+  margin: auto;
+}
+
+tr {
+  border: solid #ddd 1px;
+  /*text-align: left;*/
+  /*background-color: #81BEF7;*/
+}
+
+#controlsWidth {
+ width : 92px;
+ padding: 0;
+ margin: 0;
+}
+
+#controlsWidth span {
+  padding: 0;
+  margin: 0;
+  width: 14px;
+}
+
+.main th {
+  text-align: center;
+  padding: 5px 0;
+}
+
+.main td {
+  border: solid #ddd 1px;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  display: inline-block;
+  background: #eeeeee; /* Old browsers */
+  background: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eeeeee), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* Opera11.10+ */
+  background: -ms-linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+  background: linear-gradient(top, #eeeeee 0%,#eeeeee 100%); /* W3C */
+  border: 1px solid #a1a1a1;
+  font: bold 10px Arial, Helvetica;
+  text-decoration: none;
+  color: #333;
+  border-radius: .2em;
+}
