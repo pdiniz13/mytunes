@@ -5,13 +5,12 @@ var PlaylistEntryView = Backbone.View.extend({
 
   tagName: 'tr',
 
-  template: _.template('<td><button class="playInQueue"><span class="glyphicon glyphicon-play"></span></button></td> \
-                        <td><%= title %>(<%= artist %>)</td> \
-                        <td><button class="dequeue" value="Remove from Queue"><span class="glyphicon glyphicon-eject"></span></button></td>'),
+  template: _.template('<td>Playlist Example <button class="loadPlaylist">Load</button></td>'),
 
   events: {
     'click .loadPlaylist': function(){
-      this.model.dequeue()
+      console.log('loading playlists not implemented yet', this.model);
+      this.model.load();
     }
   },
 

@@ -19,7 +19,6 @@ var AppModel = Backbone.Model.extend({
     }, this);
 
     params.library.on('enqueue', function(song){
-      //console.log(this.get('songQueue'));
       this.get('songQueue').add(song);
     }, this);
 
@@ -44,11 +43,16 @@ var AppModel = Backbone.Model.extend({
       song.set('votes', newCount);
     }, this);
 
-    this.get('songQueue').on('savePlayList', function(songQueue){
-      this.get('playlists').add(songQueue);
-      console.log(this.get('playlists').at(0));
+    this.get('songQueue').on('savePlayList', function (songQueue){
+      var playlistModel = new PlaylistModel({songQueue: songQueue});
+      this.get('playlists').add(playlistModel);
     }, this);
 
+    this.get('playlists').on('loadPlaylist', function (songs){
+      this.set('currentSong', null);
+      this.get('songQueue').reset(songs);
+      this.get('songQueue').at(0).play();
+    }, this);
   }
 
 });

@@ -14,7 +14,7 @@ var PlaylistView = Backbone.View.extend({
 
     this.$el.children().detach();
 
-    this.$el.html('<tr><th colspan="3">Song Queue</th></tr><th>Play</th><th>Song</th><th>Remove</th>').append(
+    this.$el.html('<th>PlayLists</th>').append(
       this.collection.map(function(song){
         return new PlaylistEntryView({model: song}).render();
       })

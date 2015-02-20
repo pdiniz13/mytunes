@@ -6,7 +6,7 @@ var SongQueue = Songs.extend({
       if (this.length === 1){
         this.playFirst(song);
       }
-    }, this)
+    }, this);
   },
 
   playFirst: function(song){
@@ -14,7 +14,6 @@ var SongQueue = Songs.extend({
   },
 
   savePlaylist: function(){
-    console.log('test collections');
     this.trigger('savePlayList', this)
   }
 });
