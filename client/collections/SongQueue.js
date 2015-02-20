@@ -11,5 +11,10 @@ var SongQueue = Songs.extend({
 
   playFirst: function(song){
     song.play();
+  },
+
+  savePlaylist: function(){
+    console.log('test collections');
+    this.trigger('savePlayList', this)
   }
 });
